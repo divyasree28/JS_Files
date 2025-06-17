@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #urltext {
+            width: 15%;
+            height: 34px;
+            outline: grey;
+        }
+
+        .btn {
+            height: 40px;
+            padding: 6px 16px;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .display {
+            margin-top: 20px;
+            width: 30%;
+            padding: 6px;
+            border: 2px solid blueviolet;
+            display: flex;
+            justify-content: space-between;
+        }
+        .display a{
+            text-decoration: none;
+            color: black;
+        }
+        .btn-display button{
+            border:none;
+            color: white;
+            padding: 4px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div
+            style="width: 100%; background-color: black;color: white;text-align: center;padding: 2px;margin-bottom: 26px;">
+            <h2>My Bookmarks</h2>
+        </div>
+        <div style="text-align: center;display: flex; justify-content: center; gap: 4px;">
+            <input type="text" placeholder="Enter URL" id="urltext" />
+            <div>
+                <button type="button" style="background-color: rgb(102, 102, 223); width: 80px;" id="add"
+                    class="btn">Add Bookmark</button>
+                <button type="button" style="background-color: rgb(204, 59, 59); width: 100px;" id="deleteall"
+                    class="btn" >Delete All Bookmarks</button>
+            </div>
+        </div>
+        <div id="content" style="display: flex; flex-direction: column; align-items: center;">
+            <!-- <div class="display">
+                <a href="https://www.javascripttutorial.net/es6/javascript-promises/">google.com</a>
+                <div class="btn-display">
+                    <button type="button" style="background-color: rgb(102, 102, 223); " id="edit"
+                        >Edit</button>
+                    <button type="button" style="background-color: rgb(204, 59, 59);" id="delete"
+                       >Delete</button>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <script src="/Bookmark_Landing/bookmark.js"></script>
+</body>
+
+</html>

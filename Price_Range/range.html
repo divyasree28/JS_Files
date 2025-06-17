@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .slider {
+            text-align: center;
+            width: 30%;
+            margin-left: 20%;
+            position: relative;
+        }
+
+        .slider input {
+            position: absolute;
+            width: 100%;
+            pointer-events: none;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            pointer-events: auto;
+            -webkit-appearance: none;
+        }
+    </style>
+    <script src="/Price_Range/range.js"></script>
+</head>
+
+<body>
+    <div style="text-align: center; width: 50%; margin-left: 20%;">
+        <h1>Price Range Slider</h1>
+        <div>
+            <label for="min">Minimum Price</label>
+            <input type="text" id="min" value="0" onchange="rangemin_changed('inp')" />
+        </div>
+        <div style="margin: 20px 0px;">
+            <label for="max">Maximum Price</label>
+            <input type="text" id="max" value="0" onchange="rangemax_changed('inp')" />
+        </div>
+        <div class="slider">
+            <input type="range" class="min-range" onchange="rangemin_changed('slide')" min="0" max="10000" step="1">
+            <input type="range" class="max-range" onchange="rangemax_changed('slide')" min="0" max="10000" step="1">
+        </div>
+    </div>
+</body>
+
+</html>
