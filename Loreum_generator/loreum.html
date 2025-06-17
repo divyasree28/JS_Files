@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .style-range{
+            margin: 6px 0px;
+            border-radius: 10px;
+            padding: 10px 4px;
+            box-shadow: 0px 3px 9px 0 rgb(201, 200, 200);
+        }
+        .style-range input[type="range"]{
+            width: 100%;
+        }
+        .opt{
+            width: 100%;
+            margin: 8px 0px;
+            border-radius: 10px;
+            padding: 16px 14px;
+            box-shadow: 0px 3px 9px 0 rgb(201, 200, 200);
+            appearance: none;
+            border: none;
+            outline: none;
+        }
+    </style>
+    <script src="/Loreum_generator/loreum.js"></script>
+</head>
+
+<body>
+    <div>
+        <div
+            style="text-align: center; color: green; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+            <h1 style="padding: 6px 15px;">Lorem Ipsum Generator</h1>
+        </div>
+        <div
+            style="border-radius: 15px; padding: 12px 15px; display: block; width: 50%; margin: auto; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+            <div>
+                <label for="para"><b>Paragraphs:</b></label>
+                <div class="style-range"><input type="range" id="para" min="0" max="40" value="0" onchange="rangeChange('para')"/></div>
+                <div>
+                    <p id="para-display"></p>
+                </div>
+            </div>
+            <div>
+                <label for="words"><b>Words Per Paragraph:</b></label> <br />
+                <div class="style-range"><input type="range" min="0" max="30" id="words" value="0" onchange="rangeChange('words')"/></div>
+                <div>
+                    <p id="words-display"></p>
+                </div>
+            </div>
+            <div>
+                <label for="tags"><b>Tag:</b></label> <br/>
+                <div>
+                    <select name="tags" id="tags" class="opt">
+                        <option value="p">&lt;p&gt;</option>
+                        <option value="h1">&lt;h1&gt;</option>
+                        <option value="h2">&lt;h2&gt;</option>
+                        <option value="h3">&lt;h3&gt;</option>
+                        <option value="span">&lt;span&gt;</option>
+                    </select>
+                </div>
+            </div>
+            <div style="margin-top: 4px;">
+                <label for="include"><b>Include HTML:</b></label> <br/>
+                <div>
+                    <select name="include" id="include" class="opt">
+                       <option value="yes">Yes</option>
+                       <option value="no">No</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="submit" onclick="submitData()" style="font-size: 18px; cursor: pointer; background-color: green; width: 100%; outline: none; border: none; border-radius: 6px; color: white; padding: 12px 20px;">Generate Lorem Ipsum</button> 
+            </div>
+            <div style="padding: 5px; border-radius: 5px; border: 2px solid rgb(226, 60, 60); margin-top: 10px;" id="display"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        .main {
+            background-image: linear-gradient(to right, rgba(235, 99, 81, 0.4), rgb(252, 228, 17, 0.7));
+            padding: 40px 8px;
+            text-align: center;
+            height: 600px;
+            position: relative;
+        }
+
+        #btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 60px;
+        }
+
+        #btn-container button {
+            padding: 5px 30px;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            box-shadow: 0 4px 5px 0 grey;
+            cursor: pointer;
+        }
+
+        .toast {
+            position: absolute;
+            border-radius: 4px;
+            top: 30px;
+            right: 20px;
+        }
+
+        .toast-success{background-color: #95eab8;}
+        .toast-fail{background-color: #efaca5;}
+        .toast-info{background-color: #bddaed;}
+        .toast-warn{background-color: #ead994;}
+
+        .inner_msg{
+            display: flex;
+            gap: 8px;
+            padding: 2px 14px;
+        }
+
+        .progress {
+            width: 0%;
+            height: 5px;
+            top: 0px;
+            left: 0px;
+            border-radius: 4px;
+            animation: submitbtn 5s ease-in-out forwards;
+        }
+
+        .progress-success{background-color: #2ecc71;}
+        .progress-fail{background-color: #e74c3c;}
+        .progress-info{background-color: #3498db;}
+        .progress-warn{background-color: #f1c40f;}
+
+        @keyframes submitbtn {
+            0% {
+                width: 100%;
+            }
+
+            ;
+
+            100% {
+                width: 0%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h2>Toast Notification</h2>
+        <div id="btn-container">
+            <button id="success" type="button" style="background-color: #2ecc71;">Submit</button>
+            <button id="failed" type="button" style="background-color: #e74c3c;">Failed</button>
+            <button id="info" type="button" style="background-color: #3498db;">Information</button>
+            <button id="warn" type="button" style="background-color: #f1c40f;">Warning</button>
+        </div>
+
+        <!-- <div class="toast">
+            <div style="display: flex;  padding: 2px 14px; gap: 8px;">
+                <p><i class="bi bi-check2-circle"></i></p>
+                <p>Article submitted successfully.</p>
+            </div>
+            <div class="progress"></div>
+        </div> -->
+    </div>
+    <script src="/Toast_Message/toast.js"></script>
+</body>
+
+</html>

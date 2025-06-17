@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/output.css" rel="stylesheet">
+</head>
+
+<body onload="onPageLoad()">
+    <div class="relative mt-[50px]">
+        <div class="">
+            <hr id="hrbg" class="h-[3px] z-0 bg-zinc-500" />
+            <div class=" absolute -top-[15px] w-[100%] flex justify-evenly">
+                <div class="flex justify-center z-100 bg-zinc-500 px-2 py-1 text-white w-[30px] rounded-3xl">1</div>
+                <div class="flex justify-center z-100 bg-zinc-500 px-2 py-1 text-white w-[30px] rounded-3xl">2</div>
+                <div class="flex justify-center z-100 bg-zinc-500 px-2 py-1 text-white w-[30px] rounded-3xl">3</div>
+            </div>
+        </div>
+
+        <div class="mt-60 text-center">
+            <h1 id="step1" class="text-3xl hidden">Welcome to Step 1</h1>
+            <h1 id="step2" class="text-3xl hidden">Welcome to Step 2</h1>
+            <h1 id="step3" class="text-3xl hidden">Welcome to Step 3</h1>
+        </div>
+        <div class="w-[100%]">
+            <div class="text-right mr-12">
+                <button type="button" id="previous" class="w-[120px] px-2 py-2 cursor-pointer bg-cyan-900 text-white">Previous
+                    step</button>
+                <button type="button" id="next" class="w-[120px] px-2 py-2 cursor-pointer bg-blue-600 text-white">Next
+                    step</button>
+            </div>
+        </div>
+    </div>
+    <script src="/Multi_step_ProgressBar/progressbar.js"></script>
+</body>
+
+</html>

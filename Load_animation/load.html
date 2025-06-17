@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .load{
+            width: 120px;
+            padding: 10px 6px;
+            background-color: rgb(59, 59, 190);
+            color: white;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        .loaded{
+            width: 20px;
+            height: 20px;
+            border: 2px solid white;
+            border-top: 2px solid rgb(59, 59, 190);
+            border-radius: 30px;
+            animation: loader 2s linear infinite;
+        }
+        @keyframes loader {
+            from{
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div style="text-align: center; margin-top: 30px;">
+        <button class="load">
+            <p>Submit</p>
+            <!-- <div class="loaded"></div> -->
+        </button>
+    </div>
+    
+    <script src="/Load_animation/load.js"></script>
+</body>
+</html>
