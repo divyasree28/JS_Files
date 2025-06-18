@@ -196,6 +196,9 @@
   .mr-12 {
     margin-right: calc(var(--spacing) * 12);
   }
+  .block {
+    display: block;
+  }
   .flex {
     display: flex;
   }
