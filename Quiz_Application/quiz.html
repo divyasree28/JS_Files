@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <style>
+        .main {
+            margin: 100px auto;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .optbtn {
+            width: 600px;
+            height: 60px;
+            text-align: center;
+            border-radius: 20px;
+            cursor: pointer;
+            
+        }
+
+        .optbtn:focus {
+            background-color: green;
+            color: white;
+            outline: grey;
+        }
+
+        #options {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            gap: 10px;
+        }
+
+        #output-div {
+            margin: 100px auto;
+            width: 50%;
+            text-align: center;
+            display: none;
+            flex-direction: column;
+            gap: 20px;
+        }
+    </style>
+</head>
+
+<body onload="quizManagement()">
+    <div class="quiz">
+        <div class="main">
+            <div id="timer" style="font-size: 20px;"></div>
+            <div id="ques" style="font-weight: bold;font-size: 22px;"></div>
+            <div id="options"></div>
+            <div
+                style="width: 300px;height: 50px;border-radius: 20px; border: none;background-color: green;color: white;padding: 6px 20px;display: flex;justify-content: center; align-items: center;font-size: 20px;cursor: pointer;">
+                <a id="next">Next</a>
+            </div>
+        </div>
+        <div id="output-div">
+            <p id="expression" style="font-size: 40px;margin: 0px;"></p>
+            <p id="out" style="font-weight: bold;font-size: 26px;"></p>
+            <div style="display: flex; justify-content: center;">
+                <div
+                    style=" width: 300px;height: 50px;border-radius: 20px; border: none;background-color: green;color: white;padding: 6px 20px;display: flex;justify-content: center; align-items: center;font-size: 20px;cursor: pointer;">
+                    <a id="restart">Restart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+
+</html>
