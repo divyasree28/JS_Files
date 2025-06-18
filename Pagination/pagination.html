@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            width: 300px;
+            border: 1px solid grey;
+            border-radius: 6px;
+            padding: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div style="text-align: center;">
+            <h1>Pagination</h1>
+            <button type="button" id="display"
+                style="width: 100px;background-color: blueviolet; color: white; padding: 8px; border: none;cursor: pointer;">Display
+                Cards</button>
+        </div>
+        <div id="displayarea" style="margin-top: 40px;display: flex;justify-content: center; flex-wrap: wrap;gap: 18px;"></div>
+        <div style="margin-top: 40px;text-align: center;">
+            <button id="prev" style="cursor: pointer;padding: 8px 15px;border: none;background-color: aqua;">Previous</button>
+            <button id="next" style="cursor: pointer;padding: 8px 15px;border: none;background-color: rgb(230, 83, 26);">Next</button>
+        </div>
+        <div style="margin-top: 20px;text-align:center;">
+            <p id="pageNumber"></p>
+        </div>
+    </div>
+    <script src="/Pagination/pagination.js"></script>
+</body>
+
+</html>
