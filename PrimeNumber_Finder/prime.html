@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number Finder</title>
+    <style>
+        .btn{
+            border: none;
+            background-color: green;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 20px;
+            margin-right: 26px;
+        }
+        .main{
+            width: 20%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            padding: 16px;
+            border: 2px solid grey;
+        }
+        #num{
+            width: 300px;
+            height: 30px;
+            border-radius: 16px;
+            padding: 6px;
+            font-size: 16px;
+        }
+        .outputarea{
+            border-radius: 8px;
+            height: 100px;
+            background-color: rgb(9, 49, 9);
+            color: white;
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>Prime Number Finder</h1> 
+        <div>
+            <input type="text" id="num"/>
+        </div>
+        <div>
+            <button id="clear" class="btn">Clear</button>
+            <button id="submit" class="btn">submit</button>
+        </div>
+        <div class="outputarea">
+            <h3 id="output"></h3>
+        </div>
+    </div>
+    <script src="prime.js"></script>
+</body>
+</html>
