@@ -8,3 +8,4 @@ Geeks For Geeks:
         4- Github Profile Serach
         7- Multi-Step Progress Bar (middle)
         17- Wikipedia Search(needed jQuery)
+        23- Dynamic Resume Builder

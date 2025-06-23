@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Rating</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        .main {
+            margin: auto;
+            width: 30%;
+            height: 220px;
+            background-color: green;
+            padding: 50px;
+        }
+
+        .innerdiv {
+            padding: 14px;
+            border-radius: 10px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        button{
+            border: none;
+            background-color: white;
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="innerdiv">
+            <h1>Star Rating Using JS</h1>
+            <div style="display: flex;gap: 16px;">
+                <button onclick="rating(this,1)"><i class="bi bi-star"></i></button>
+                <button onclick="rating(this,2)"><i class="bi bi-star"></i></button>
+                <button onclick="rating(this,3)"><i class="bi bi-star"></i></button>
+                <button onclick="rating(this,4)"><i class="bi bi-star"></i></button>
+                <button onclick="rating(this,5)"><i class="bi bi-star"></i></button>
+            </div>
+            <p id="out" style="font-size: 20px;">Rating is:</p>
+        </div>
+    </div>
+    <script>
+        let rate=0;
+        let out=document.getElementById('out');
+        function rating(e,num) {
+            rate=num;
+            let btns=document.querySelectorAll('button');
+            btns.forEach((b,idx)=>{
+                if(idx<num) {
+                    b.innerHTML=`<i class="bi bi-star-fill" style="color:gold;"></i>`;
+                }
+                else{
+                    b.innerHTML=`<i class="bi bi-star"></i>`;
+                }
+            })
+            out.textContent=`Rating is: ${rate}`;
+        }
+    </script>
+</body>
+
+</html>

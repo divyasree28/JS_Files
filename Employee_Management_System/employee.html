@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        .main_frame {
+            width: 99%;
+            margin: 10px;
+            border: 1px solid grey;
+            height: 600px;
+            display: flex;
+        }
+
+        .emp_list {
+            width: 20%;
+            height: 600px;
+            border-right: 1px solid grey;
+            overflow-y: auto;
+        }
+
+        .list_design {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 5px;
+            padding: 3px 10px;
+            font-size: 20px;
+            background-color: rgb(226, 222, 222);
+            border-radius: 16px;
+        }
+
+        .list_btn {
+            border: none;
+            background-color: inherit;
+            font-size: 20px;
+        }
+
+        .add_popup {
+            position: fixed;
+            width: 50%;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            display: none;
+            background-color: rgb(0, 0, 0, 0.4);
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal {
+            width: 24%;
+            background-color: white;
+            padding-bottom: 20px;
+            border-radius: 4px;
+        }
+
+        .emp_input {
+            height: 30px;
+            width: 400px;
+            border: 1px solid grey;
+            border-radius: 4px;
+        }
+
+        .emp1_input {
+            height: 30px;
+            width: 195px;
+            border: 1px solid grey;
+            border-radius: 4px;
+        }
+        #display {
+            width: 100%;
+        }
+        #display>div>p{
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div style="width: 100%;" id="main">
+            <div style="display: flex; justify-content: space-between;align-items: center;">
+                <h1 style="text-align: center;">Employee Management System</h1>
+                <button id="add"
+                    style="border-radius: 16px; padding: 6px;border: none;height: 30px;cursor: pointer;">Add
+                    Employee</button>
+            </div>
+
+            <div class="main_frame">
+                <div class="emp_list">
+                    <div style="border-bottom: 1px solid grey;padding: 8px;">
+                        <h3 style="margin-top: 0px;text-align: center;">Employee List</h3>
+                    </div>
+                    <div id="add_item">
+                        
+                    </div>
+                </div>
+                <div id="display">
+                    <div style="border-bottom: 1px solid grey;padding: 8px;">
+                        <h3 style="margin-top: 0px;text-align: center;">Employee Information</h3>
+                    </div>
+                    <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;padding: 20px;gap: 15px;">
+                        <img src="" width="250px" height="250px" style="border-radius: 50%;"/>
+                        <b><p id="dname" style="font-size: 26px;margin: 0;"></p></b>
+                        <p id="daddress"></p>
+                        <p id="demail"></p>
+                        <p id="dmobile"></p>
+                        <p id="ddate"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="add_popup">
+            <div class="modal">
+                <h2 style="text-align: center;">Add New Employee</h2>
+                <div
+                    style="display: flex; flex-direction: column;gap: 5px;justify-content: center;align-items: center;">
+                    <div style="display: flex;gap: 5px;">
+                        <input type="text" id="fname" placeholder="First name" class="emp1_input" />
+                        <input type="text" id="lname" placeholder="Last name" class="emp1_input" />
+                    </div>
+                    <input type="text" id="img_url" class="emp_input" placeholder="Image URL" />
+                    <input type="text" id="email" class="emp_input" placeholder="Email" />
+                    <input type="text" id="contact" class="emp_input" placeholder="Contact" />
+                    <input type="text" id="salary" class="emp_input" placeholder="Salary" />
+                    <input type="text" id="address" class="emp_input" placeholder="Address" />
+                    <input type="date" id="date" class="emp_input">
+                    <button type="submit" id="submit"
+                        style="width: 50%;border: none; height: 40px;border-radius: 4px;background-color: green;color: white;">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="employee.js"></script>
+</body>
+
+</html>
