@@ -3,6 +3,9 @@
 <body>
   <button id="btn">Click Me</button>
   <p id="out"></p>
+  <input type="date" id="date1"/> 
+  <input type="date" id="date2"/>
+  <button id="submit">Submit</button>
 <script>
   // document.getElementById('btn').addEventListener('click', () => {
   //   console.log('Button clicked');
@@ -10,10 +13,21 @@
 
   // console.log('Script executed');
 
-setInterval(()=>{
-  let d=new Date();
-  document.getElementById('out').textContent=d.getSeconds();
-},1000)
+// setInterval(()=>{
+//   let d=new Date();
+//   document.getElementById('out').textContent=d.getSeconds();
+// },1000)
+
+document.getElementById('submit').addEventListener("click",(e)=>{
+  e.preventDefault();
+  let date1=new Date(document.getElementById('date1').value);
+  let date2=new Date(document.getElementById('date2').value);
+  let diff=(date2.getFullYear()-date1.getFullYear());
+  if(date2.getMonth()-date1.getMonth()<0) {
+    diff--;
+  }
+  console.log(diff);
+})
   
 </script>
 </body>
